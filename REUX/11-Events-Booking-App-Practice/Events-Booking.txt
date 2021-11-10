@@ -1,0 +1,271 @@
+delete components, server from bigbasket
+
+Events Booking (Full Stack Application) (MERN Stack)
+---------------------------------------
+Concepts : FormValidation & Authentication & Authorization
+
+client modules
+--------------
+npm install axios react-router-dom redux react-redux redux-thunk redux-logger redux-devtools-extension
+
+client:
+-------
+components : 
+	-> root ( root folder lo separate folders,home,navbar,spinner )
+		-> home
+		-> navbar
+		-> spinner
+	-> events   ( events folder lo separate folders,free-events, pro-events, upload )
+		-> free-events
+		-> prod-events
+		-> upload
+	-> users    ( users folder lo separate folders,login, register )
+		-> login
+		-> register
+		
+REDUX
+------
+ActionTypes
+actions
+reducers
+store
+
+server (Express , MongoDB)
+---------------------------
+modules : express , cors , dotenv, bcrypt , gravatar , jsonwebtoken , mongoose , express-validator
+
+npm install express cors dotenv bcrypt gravatar jsonwebtoken mongoose express-validator
+
+REST API with routing
+---------------------
+userRouter -> login & Register
+eventRouter -> free , pro , upload 
+
+1) Get all Free Events
+ URL : http://127.0.0.1:5000/events/free-events
+ Method : GET
+ fields : no-fields
+
+2) Get all Pro Events
+ URL : http://127.0.0.1:5000/events/pro-events
+ Method : GET
+ fields : no-fields
+
+3) Upload Events
+ URL : http://127.0.0.1:5000/events/upload
+ Method : POST
+ fields : name , image , date , price , info, type
+
+4) Register a User
+
+ URL : http://127.0.0.1:5000/users/register
+ Method : POST
+ fields : name , email , password
+
+5) Login a User
+
+ URL : http://127.0.0.1:5000/users/login
+ Method : POST
+ fields : email , password
+
+Database Setup
+---------------
+database -> events-booking-react
+tables -> users , events 
+
+open command > mongo
+             > show dbs
+
+events : name , image , type , date , price , info , created
+users : name , email , password , image , isAdmin , created
+
+------------------------------------ Start Coding Here ------------------------------------------------------------------
+ 
+( Part 1 Video )
+
+Create Components in src folder
+ 
+Crete "events" folder, "users" folder in redux folder.
+    ----> events Actions Types
+        1) events.actionTypes.js ( write code )
+        2) events.actions.js ( write code )
+        3) events.reduser.js ( write code )   after go to root.reduser.js and import Redux Brower
+
+    ----> users Actions Types
+        1) users.actionTypes.js
+        2) users.actions.js
+        3) users.reduser.js
+
+---------------------------------------------------------------------------
+
+( Part 2 Video ) 
+ 
+   
+    ----> users Actions Types
+        1) users.actionTypes.js ( write code )
+        2) users.actions.js ( write code )
+        3) users.reduser.js ( write code )   after go to root.reduser.js and import and Look in Redux Brower
+
+
+After Create Server Folder 
+  ---> npm init --yes
+   go to --> package.json index.js name change to server.js & "test" name change to "start" and "nodemon server.js" change
+   install : npm install express cors dotenv bcrypt gravatar jsonwebtoken mongoose express-validator
+   
+SERVER : -------create server.js in server folder-----
+
+create "config" in server folder create in config folder "config.env"
+
+write server code-------------------------
+
+write config.env code-------------------
+
+create "router" folder in server folder and create "userRouter.js" and "eventRouter.js"
+
+create "models" folder in server folder and create "User.js" and "Event.js"
+ 
+  write User.js code--------------
+
+  write Event.js------------------
+
+  After Write Registration Logic and Login Logic--------------------
+  
+  -------------------------Big Mistake Not Connected Mongo DB Not writed Authonticate Code------------------------
+
+  After Check with Backend Insomia Registration Logic and Save Rigistration data into Users Table Mongo DB Successfully---------------
+
+  Registration Logic and Login Logic Working in Insomia, Postman
+
+  After Write "Free Events Logic" , "Pro Events Logic" , "Upload Events Logic" and Check with Backend With Insomia Working Successfully Saved to the Database Events Table--------
+
+  GET "FREE EVENTS" and "PRO EVENTS" check with using Insomia----------------------------------
+
+
+
+                                  ---------------------------------------------FrontEnd-----------------------------------
+  After Go to Frontend Rigister.js Registration Form-----------------------------------------------------------------------------------------------------------------------------------------------
+  
+  registration form validations front + backend  
+
+  users.actions.js redirect to login page-----------------  
+ 
+  RegisterForm Data Save to Database--------------
+
+  After Go to Login.js Login with same data in Database-----------------
+
+  After Login a User in Navbar Person Name, Photo, Information Write Code In Server userRouter.js ===> "GET USER INFORMATION" ----------------
+
+  Create a "middleware" folder in create "authenticate.js" ------------- for token + request send to server and verify the token success => logOut , Login-------------
+
+  Write authenticate.js code--------------------
+ 
+  After Go to Insomia go to Get User Request = > http://127.0.0.1:5000/users/
+  
+ After Go to Header write "Authorization"  next Bearer Token Number "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjAxMDNmNTM4NDgyNDkxZDZjNzMwMjNkIn0sImlhdCI6MTYxMTczODk1NH0.96bFaeYmIt8MNMFO7fLoeNRvxf6cSU3jgRVCJfmmrmU"
+
+  Get the Particular User Information-------------------
+
+  After go to "users.actionTypes.js" ,"users.actions.js", "users.reduser.js" -----------Write Get User Information
+
+  After go to "SRC" Create "util" folder in create "setAuthToken.js" and Write Code-------------
+
+  After Once Login And Look The Redux Setup in TOKEN + User Information-------------------
+
+  After Go to Navbar  ?  Once Login , Logout Action In Navbar------------------
+
+  After Go  to Upoad Event Page Upload Logic------------ and upload events with backend some events check in Database Upload is Working--------
+
+  How to Display Database Events On Frontend Page---------------------
+
+  Go to  FreeEvents.js---------------------------------------write logic in state and Displaying the Events------------------------------
+
+  After Write Spinner Logic -------------------
+
+  Go to  ProEvents.js---------------------------------------write logic in state and Displaying the Events------------------------------
+
+  authorization upload events option only admin go to uploadEvents.js,Navbar.js,user.actions.js---------------  ///
+
+  After go to Mongo DB "Click" to isAdmin Option and "true" after check Frontend Upload Event Form------------------ working----------
+
+  ------------------------ Private Router ----------------------
+  
+  FreeEvents Anybody Access But ?
+  
+  ProEvents, Upload Page you should login First.
+
+  create router folder and create PrivateRoute.js---- write code PrivateRoute.js and app.js 
+  
+  import provider index.js and remove from app.js-----------
+
+
+--------------------- How to Print Invalid Crediantials Using Server Database Check and Print Frontend --------------------------
+ 
+ Create "alert" Folder create Alert.js-------------write code frontend
+ 
+ Create Redux Setup---------------- actionTypes.js, actions.js , reducer.js write
+
+ npm install uuid
+
+  
+  
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

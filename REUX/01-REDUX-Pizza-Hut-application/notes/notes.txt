@@ -1,0 +1,17 @@
+Redux
+------
+-> redux
+-> react-redux
+-> redux-devtools-extension -> Debug Purpose
+
+npm install redux react-redux redux-devtools-extension
+
+-> ActionTypes
+-> Action Creators
+-> Reducer
+-> Store
+
+-> useSelector()
+-> usedispatch()
+
+download redux-devtools-extension form Google

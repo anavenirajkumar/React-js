@@ -1,0 +1,16 @@
+nav{
+    background-color: black;
+    padding: 20px;
+    font-size: 18px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+.btn-dark, .btn-dark{
+    background: linear-gradient(45deg,black,red);
+}
+
+.table tbody tr td{
+  font-weight: bold;
+}

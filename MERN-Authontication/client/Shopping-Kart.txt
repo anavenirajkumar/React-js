@@ -1,0 +1,473 @@
+
+
+------------------------------ Shopping Kart Practice -----------------------------
+
+ // second time writen page , /// third time writen page   *understanding code tricks"
+
+ // --> /// second page going to third page
+
+------------------------------ Start Coding Here ----------------------------------
+
+Create a Folder go to Command Create React App from Scratch --> 
+            npx create-react-app client  --> client means client side code and go to client folder command npm start
+
+Npm Packages : npm install axios react-router-dom redux react-redux redux-thunk redux-logger redux-devtools-extension mdbootstrap
+
+paste bootstrap folder in src
+
+go to public folder and "index.html" add "mdbootstrap" files
+
+go to src folder and "index.js" add "css" files
+
+go to app.js remove header part and create assets folder
+
+create modules folder in src and create layout , products , users, orders components
+
+aftre create REDUX SETUP folders 
+
+and create rootReducer, store.js write code and go to index.js import Provider
+
+after write components in layout --> Home.js , Navbar.js , Spinner.js.........
+
+after write redux setup orders actionTypes.js
+
+after go app.css clear all css styles
+
+Write Design App.js, Navbar, Home....
+
+Part 2------------------------------
+
+VS Code Formatter Shift + alt + f
+
+Design All Components---------------------------
+
+
+ -------------------------- SERVER SIDE SETUP -------------------------
+
+  -> npm init --yes
+        --> go to package.json : "main" : "server.js"
+        --> "start" : "nodemon server.js"
+
+ -> npm packages :  npm install bcryptjs cors dotenv express express-validator gravatar jsonwebtoken mongoose stripe
+
+ -> create "server.js"
+
+ -> create "config" folder in create config.env
+ 
+ -> create "models" folder for database tables
+
+ -> create "router" folder
+
+ -> create "middlewares" folder
+
+ -> Write Code "server.js" 
+
+ -> write Code "config.env"
+
+ -> Write Code "router" folder in "userRouter.js" , "productRouter.js" , "orderRouter.js" , "paymentRouter.js"
+
+ -> go to "models" folder Create Database Tables : 
+                          -> create User.js ( Create User Database Table) write code...............
+                          -> create Product.js ( Create Product Database Table) write code............... 
+                          -> -> create Order.js ( Create Order Database Table) write code............... 
+
+-> After Go to "router" folder write All Logics ->  ///
+
+            -> "userRouter.js" ,  --------------------> import
+
+            -> "userRouter.js" -> 
+                       -> Registration Logic after check with Insomia and Look Errors in Command & table names same as adress : names
+                                         -> After
+                       -> Login Logic after check with Insomia "Login Success"
+
+                       -> GET User Information Logic -> "authentication"
+                            -> go to middleware folder and write code "authentication.js"
+
+                       -> GET User Information Logic after Go to Insomia
+                            -> go to Login a User first login copy token and 
+                            -> go to GET User Information headers "Authorization" "Bearer paste token number" send
+                       
+                       -> Create / Update Address Logic and after go to Insomia Create "POST" Request Update address
+                            -> http://127.0.0.1:5000/user/address -> POST METHOD
+                            -> go to Login a User first login copy token and 
+                            -> go to Update Adress Request headers "Authorization" "Bearer paste token number"
+                                 JSON : write address {""}
+                       
+             -> "productRouter.js"  ------------------> import and write Upload code 
+                   after check with Insomia Create Upload Product Request----- "POST"
+                  -> go to Login a User first login copy token and 
+                            -> go to Upload Product headers "Authorization" "Bearer paste token number"
+                                 JSON : Write Upload JSON {""}
+                  -> Upload Different Products Category -> MEN, WOMEN, KIDS  (DATABASE)
+
+                        -> GET Men's Collection Logic, Womens, Kids
+                           -> After check with Insomia GET Mens, Womens, Kids Products
+
+                        -> GET Single Product Logic and Check with Insomia using "ID" -> 5000/product/id
+             
+         
+                     
+             -> "orderRouter.js" -------------------> import and write Order code 
+
+                  -> Place an Order Logic  After check with Insomia
+
+                  -> go to Login a User first login copy token and 
+                      -> go to Place Order headers "Authorization" "Bearer paste token number"
+                       JSON {
+                             "items" : [
+                                   {
+                                  "name" : "Mens Fit Shirt",
+                                   "price" : 100,
+                                    "qty" : 1  
+                                 },
+                                  {
+                                  "name" : "Womens Saree",
+                                   "price" : 200,
+                                    "qty" : 2  
+                                 },
+                                  {
+                                  "name" : "Kids Shirt",
+                                   "price" : 300,
+                                    "qty" : 3  
+                                 }
+                              ],
+                              "tax" : 150,
+                               "total" : 750 
+                            }   after Send---------------->
+
+                 -> GET All Order Logic and Check with Insomia 
+                       -> Place an Order Logic  After check with Insomia
+                       -> go to Login a User first login copy token and 
+                       -> go to GET All Order headers "Authorization" "Bearer paste token number"
+
+
+                  "paymentRouter.js"  ?
+
+
+
+
+
+------------------------------------- FrontEnd --------------------------------
+
+------------> How to Connect Backend the FrontEnd -----------------45 Video------------------
+
+  1) First Upload----->
+
+      -> Delete Products from Database
+      -> Write Code in Upload.js look console browser upload DATA after go to REDUX Actions Types
+
+REDUX :  -> productsActionTypes.js -> write code
+         -> products.actions.js -> write code
+         -> products.reducer.js -> write code After Go to RootReducer.js import PRODUCT_FEATURE_KEY and look Browser Redux state
+           and upload a Product from FrontEnd and "----> (ImageError Server) images is only client assets folder accepting" saved in DATABASE
+         
+         -> productsActionTypes.js -> write code
+         -> products.actions.js -> write code  GET MENS COLLECTIONS
+         -> products.reducer.js -> write code  GET MENS COLLECTIONS     
+
+         -> FETCH Data From Database and Display Frontend -> Go to MensCollection.js Write Code
+          
+         -> After write Kids Collection products.actions.js ->  Get KID'S Collection
+         -> After write Kids Collection products.actions.js ->  Get WOMEN'S Collection
+         
+         -> After go to products.reducer.js -> Write Code Get KID'S Collection,  Get WOMEN'S Collection 
+
+         -> Go to Write Code "KidsCollection.js", and "WomensCollection.js" FrondEnd Looping Map Function();
+
+         -> After Perticuler Product Details--------> product/:id Configure with -> app.js and img path-> Link and create ProductDeatails.js Design
+
+         -> product.ActionType.js -> product.actions.js -> product.Reducer.js    ------->  Get Single Product
+
+         -> ProductDetalis.js -> When the Page Loads -> UseEffect & Dispatch after chech in redux browser
+      
+
+           Error Code -> Get Product----------------> product.acions -> Solved
+
+         -> and Same Perticular Product Code to All------------------>
+
+
+--------> How to Register User with Frontend ->
+     ------------------------> Remove authenticate in Server
+    -> Go to  Register.js 
+    -> After Write All Fields name,email,password & submit in cosole.log()
+    -> After Write REDUX Setup: user.actionTypes.js , user.actions.js, user.reducer.js
+     
+    -> user.actionTypes.js : Write Code
+
+    -> user.actions.js: Write Code
+
+    -> user.Reducer.js: Write Code After Go to RootReducer.js and After Look Redux State in Browser
+
+    -> Dispatch Functions -> Register.js After ->  Register Using FrontEnd and Check in DATABASE
+ 
+    -> After "Alert" System -> 
+           -> Create "alert" folder in layout components in write code and  npm install uuid -> for alert system only install "client" 
+           -> Write REDUX Setup :
+           -> alert.actionTypes.js
+           -> alert.actions.js
+           -> alert.Reducer.js after config with ---> RootReducer and App.js
+
+    -----> Login System : Go to Login.js Write Code
+   
+          Login REDUX Setup :  user.ActionTypes.js , user.actions.js, user.Reducer.js Write Code 
+
+          ->  After Go to Login.js Disptch Here And Check Login Using FrontEnd----------> Browser and "Redux" and "Local Storage"
+
+   -----> GET USER Information on Profile
+
+        REDUX SETUP :  user.actionTypes.js , user.actions.js, user.Reducer.js -> Write Code
+
+        After Create "util" folder Write "SetAuthenticate" Code -----------------------authenticate----------------------------------->
+
+ ----> User is Login:  Get User Information Only Write After Get User Information actionTypes,actions.js,reducers.js Time and Check Browser Once Login Look In REDUX User Information Status---------------------->
+
+
+-----> Navbar Login , Logout System -------------------> Go to Config App.js and Navbar.js After Check in Browser Logout Is Not Working Go to LogOUT SYSTEM
+
+  -> LoGout System CREATE REDUX Setup : user.ActionTypes.js , user,actions.js , user.Reducer.js -------> Write Code After Go to Navbar.js Dispatch Functions Look in Browser Logout is Working
+ 
+-----------------> Cart Items  ------------------------------------------------
+
+ -> Go to Product Details.js Write Code and Create REDUX SETUP :
+        
+    -> order.ActionTypes.js
+    -> order.actions.js
+    -> order.reducer.js after Go to RootReducer import FEATURE_KEY Check in REDUX Bowser
+  
+    After Go to ProductDetails.js write Dispatch Functions; After check in REDUX Browser Qty
+
+   Also Same to All Homepages Direct Add To Cart--------------------------------------->
+
+
+Increase The Quantity, Decrease The Quantity in Cart Page----------------------->
+       
+   REDUX SETUP: orders.actionTypes.js , order.action.js , orders.Reducer.js Write Code
+
+     -> After Go To Cart.js Write Code----------------------> After Check
+
+Delete Cart Items--------------------------------------> Delete Functions()
+      
+      REDUX SETUP :  orders.actionTypes.js , order.action.js , orders.Reducer.js Write Code and Dispatch check in Bowser Delete Button
+
+
+-----------> CartIcon : Add To Cart  Icon Increase Badge and Decrease Badge Icon Go to Navbar.js  Write Code Check in Browser
+
+
+
+-----------------------------------> Profile -----------------------------------------------------
+
+  ----> Checkout is a Private Router -> Create router folder and Create write PrivateRoute.js and Write Code----------------->
+
+  Config with App.js PrivateRoute ------>
+ 
+ ----> Go to Profile.js -> Write Code
+ 
+  ---> Upadte Address Create REDUX SETUP : user.ActionTypes.js , user.actions.js , user.Reducer.js
+  
+ After Go to Profile.js Dispatch Actions in Upadate Addres() and Check in Database
+
+
+-------------------> Checkout Page --------------------------
+
+ Go to Checkout.js Write Code----------------
+
+
+------------------------------------------------------------------ Stripe Payments -------------------------------------------------------
+ 
+ Go to Stripe.com Signup Go to Developers Options API KEYS : Public Key , Private Key
+
+ how to install Stripe : 
+
+ Client SIDE : npm install react-stripe-checkout
+  ---------> Create File: .env ------------------> Write Code PUBLICE_KEY Copy From Stripe.com
+
+ 
+ SERVER SIDE : npm install stripe
+     ------> Go to Server in Config.env Write Code : STRIPE_SECRET_KEY=SECRET_KEY Copy from Stripe.com
+
+
+-------> After Go to Checkout Page : Checkout.js Import Stripe Write Code
+
+  REDUX SETUP FOR MAKE PAYMENTS : products.ActionTypes.js , products.actions.js , products.Reducer.js Write Code After Restart -----> React App
+
+ -------------> After Check With Checkout Payment Form and Stripe.com Website Payments
+
+
+
+----------------------------------------------------- Place Order ---------------------------------------------------
+
+ -------> REDUX SETUP : orders.ActionTypes , orders.actions.js , orders.Reducer.js
+
+  After Go to Checkout Page.js Write Code After Payment and Check orders in DATABASE
+    
+-------------------------- Order Page Succefull -------------------------------------
+
+Go to OrderSuccess.js -> Write Code and config with app.js and Check with Stripe Payment Going OrderList Page
+
+After OrderList Page Successfull -> Cart Items Is Empty Write Code
+      ------> CLEAR_CART REDUX SETUP : orderAction.Types.js , order.actions.js , order.reducer.js
+      in PalceOrder => order.actions.js Dispatch
+           => dispatch(clearCartItems()); Cart Items Empty After Order Page is Successsfull 
+
+
+--------------------- GET All Orders -----------------------------------------------
+      
+     REDUX Setup =>  orderAction.Types.js , order.actions.js , order.reducer.js
+    
+     After Go to "OrderList.js" Page Dispatch => Write Code Looping Map
+
+
+--------------------------------------------------------------------------- Diployment ---------------------------------------------------------------------------------
+
+
+npm run built : compressing React Files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+Redux
+------
+-> redux
+-> react-redux
+-> redux-devtools-extension -> Debug Purpose
+
+npm install redux react-redux redux-devtools-extension

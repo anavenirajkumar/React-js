@@ -1,0 +1,85 @@
+Events Booking (Full Stack Application) (MERN Stack)
+---------------------------------------
+Concepts : FormValidation & Authentication & Authorization
+
+client modules
+--------------
+npm install axios react-router-dom redux react-redux redux-thunk redux-logger redux-devtools-extension
+
+client:
+-------
+components : 
+	-> root
+		-> home
+		-> navbar
+		-> spinner
+	-> events
+		-> free-events
+		-> prod-events
+		-> upload
+	-> users
+		-> login
+		-> register
+		
+REDUX
+------
+ActionTypes
+actions
+reducers
+store
+
+server (Express , MongoDB)
+---------------------------
+modules : express , cors , dotenv, bcrypt , gravatar , jsonwebtoken , mongoose , express-validator
+
+npm install express cors dotenv bcrypt gravatar jsonwebtoken mongoose express-validator
+
+REST API with routing
+---------------------
+userRouter -> login & Register
+eventRouter -> free , pro , upload 
+
+1) Get all Free Events
+ URL : http://127.0.0.1:5000/events/free-events
+ Method : GET
+ fields : no-fields
+
+2) Get all Pro Events
+ URL : http://127.0.0.1:5000/events/pro-events
+ Method : GET
+ fields : no-fields
+
+3) Upload Events
+ URL : http://127.0.0.1:5000/events/upload
+ Method : POST
+ fields : name , image , date , price , info, type
+
+4) Register a User
+
+ URL : http://127.0.0.1:5000/users/register
+ Method : POST
+ fields : name , email , password
+
+5) Login a User
+
+ URL : http://127.0.0.1:5000/users/login
+ Method : POST
+ fields : email , password
+
+Database Setup
+---------------
+database -> events-booking-react
+tables -> users , events 
+
+events : name , image , type , date , price , info , created
+users : name , email , password , image , isAdmin , created
+
+
+
+
+
+
+
+
+
+		

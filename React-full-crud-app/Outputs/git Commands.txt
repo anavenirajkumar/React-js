@@ -1,0 +1,76 @@
+Adding Files to the Git
+
+
+------Create New Repository in Github to Add Files----
+
+
+cmd>git config --global user.name "Rajkumar"
+
+cmd>git config --global user.email "anaveni.laxminarsaiah123@gmail.com"
+
+
+cmd>git init
+
+cmd>git status
+
+cmd>git remote add origin "git Folder URL"
+
+Add All Files to Git  cmd>git add . 
+
+cmd>git status
+
+cmd>git commit -m "Angular...type message"
+
+cmd>git push origin master
+
+
+
+--------------------------
+
+
+Your account has been created with username epiz_26876475!
+
+
+
+
+cmd: git add filename1 filename2.....
+
+Commit the files
+cmd:git commit -m "message"
+
+Push the files into branch (repository)
+cmd: git push origin branchname
+
+To Know Status of the project
+cmd:git status
+
+To know all the git commits
+cmd:git log
+
+to revert the changes into previous commit
+cmd:git reset --hard
+
+to pull the latest code from banch
+cmd: git pull origin branchname
+
+to clone the Entire Project
+cmd:git clone url
+
+-------git user name,email commands to set------------
+ 
+cmds:
+git congig  user.name "Your name"
+
+git config user.email "Your email"
+
+---------------
+to add new reposioty
+
+git remote add origin git@github.com:User/UserRepo.git
+
+
+
+
+Angular Creating:
+
+header component :ng g component header
